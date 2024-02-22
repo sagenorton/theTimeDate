@@ -1,55 +1,27 @@
 time data:nth-child(0) {
-    display: none;
-  }
-  
-  
-  body{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    color: white;
-    background: Ivory;
-  }
-  
-  time {
-    font-size: 3em;
-  }
-  
-  .hours {
-    background: DarkTurquoise;
-  }
-  
-  .minutes {
-    background: PaleVioletRed;
-  }
-  
-  .seconds {
-    background: MediumPurple;
-  }
-  
-  .AmOrPm {
-    background: MediumSeaGreen;
-  }
-  
-  .month {
-    background: PaleVioletRed;
-    padding: 10px;
-  }
-  
-  .dayOfMonth {
-    background: MediumPurple;
-    padding: 10px;
-  }
-  
-  .year {
-    background: MediumSeaGreen;
-    padding: 10px;
-  }
-  
-  .dayOfWeek {
-    background: DarkTurquoise;
-    padding: 10px;
-  }
+  display: none;
+}
+
+
+body{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  color: white;
+}
+
+time {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+day {
+  font-size: 3em;
+  text-align: center;
+}
+
+date {
+  font-size: 3em;
+}
