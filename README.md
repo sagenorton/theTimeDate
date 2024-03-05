@@ -11,4 +11,5 @@
 > Using code to calculate the current date and time.
 
 # Citations
->Fontshare (https://api.fontshare.com/v2/css?f[]=quicksand@600,700,400,300,500,1&display=swap)
+>Fontshare (https://api.fontshare.com/v2/css?f[]=quicksand@500&display=swap)
+>

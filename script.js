@@ -1,25 +1,39 @@
-// Define the arrays of colors and fonts
+// Define the base font size
+var baseFontSize = 20; // Adjust this to your default font size
+
+// Define the array of colors
 var colors = ['DarkTurquoise', 'PaleVioletRed', 'MediumPurple', 'MediumSeaGreen'];
-var fonts = ["'Chillax', sans-serif", "'Neco', serif", "'Pally', sans-serif", "'Quicksand', sans-serif"];
 
-// Initialize variables to keep track of the current indices
-var colorIndex = 0;
-var fontIndex = 0;
+// Initialize a variable to keep track of the current color index
+var currentIndex = 0;
+var lastMinuteChecked = -1;
 
-// Set up the interval to change the background color and the font
-setInterval(function () {
-    // Set the background color to the current color in the array
-    document.body.style.backgroundColor = colors[colorIndex];
+// Function to update font size based on the current time
+function updateFontSize() {
+    var now = new Date();
+    var currentMinute = now.getMinutes();
 
-    // Increment the color index, and reset it to 0 if it reaches the length of the colors array
-    colorIndex = (colorIndex + 1) % colors.length;
-
-    // If the color index resets (i.e., completes a full cycle), change the font
-    if (colorIndex === 0) {
-        document.body.style.fontFamily = fonts[fontIndex];
-        fontIndex = (fontIndex + 1) % fonts.length;
+    // Update the font size only if the minute has changed
+    if (currentMinute !== lastMinuteChecked) {
+        var currentFontSize = baseFontSize + (currentMinute === 0 ? 0 : currentMinute);
+        document.body.style.fontSize = currentFontSize + 'px';
+        lastMinuteChecked = currentMinute;
     }
-}, 1000);
+}
+
+// Function to update background color every second
+function updateBackgroundColor() {
+    document.body.style.backgroundColor = colors[currentIndex];
+    currentIndex = (currentIndex + 1) % colors.length;
+}
+
+// Set up the intervals
+setInterval(updateFontSize, 1000); // Check and update font size every second
+setInterval(updateBackgroundColor, 1000); // Update background color every second
+
+// Initial update
+updateFontSize();
+updateBackgroundColor();
 
 
 

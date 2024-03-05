@@ -4,6 +4,7 @@ time data:nth-child(0) {
 
 
 body{
+  font-family: 'Quicksand', sans-serif;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -12,16 +13,10 @@ body{
 }
 
 time {
-  font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
 }
 
 day {
-  font-size: 3em;
   text-align: center;
-}
-
-date {
-  font-size: 3em;
 }
